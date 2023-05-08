@@ -27,7 +27,7 @@ function CreateArticles() {
             setErrorMsg("Please fill in the title and body of the Article before clicking Create.")
         }else{
         try {
-        var response = await axios.post("http://54.217.235.42:4000/articles",
+        var response = await axios.post("http://18.203.81.62:4000/articles",
             {title: title, body: body, published: published},
             {headers: {Accept: 'application/json'}}
         )

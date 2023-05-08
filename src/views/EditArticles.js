@@ -11,7 +11,7 @@ function EditArticles({ id }) {
 
     useEffect(() =>
     async function () {
-        var response = await axios.get("http://54.217.235.42:4000/articles");
+        var response = await axios.get("http://18.203.81.62:4000/articles");
         const article = response.data;
         setArticleID(article.id);
         setTitle(article.title);
@@ -39,7 +39,7 @@ function EditArticles({ id }) {
     async function handleSubmit(e) {
         e.preventDefault();
         try {
-        var response = await axios.put(`http://54.217.235.42:4000/articles/${id}`,
+        var response = await axios.put(`http://18.203.81.62:4000/articles/${id}`,
         {title: title, body: body, published: published},
             {
                 method: 'PUT',

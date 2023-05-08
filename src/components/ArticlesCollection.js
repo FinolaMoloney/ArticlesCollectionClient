@@ -10,7 +10,7 @@ function ArticlesCollection() {
 
     useEffect(() =>
     async function () {
-        var response = await axios.get("http://54.217.235.42:4000/articles",
+        var response = await axios.get("http://18.203.81.62:4000/articles",
         {headers: {Accept: "application/json"} })
         setArticlesCollection(response.data)
         var articleId = response.data.id

@@ -9,7 +9,7 @@ function ShowArticles({ id }) {
     useEffect(() => {
       async function fetchArticle() {
         const response = await axios.get(
-          `http://54.217.235.42:4000/articles/${id}`,
+          `http://18.203.81.62:4000/articles/${id}`,
           { headers: { Accept: "application/json" } }
         );
         setArticle(response.data)
@@ -21,7 +21,7 @@ function ShowArticles({ id }) {
         async function handleSubmit(e) {
             e.preventDefault();
             try {
-            var response = await axios.delete(`http://54.217.235.42:4000/articles/${id}`,
+            var response = await axios.delete(`http://18.203.81.62:4000/articles/${id}`,
                
                 {
                     method: 'DELETE',

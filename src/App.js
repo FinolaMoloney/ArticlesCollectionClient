@@ -1,24 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter as Router, Route} from 'react-router-dom'
+import ArticlesCollection from './components/ArticlesCollection'
+import CreateArticles from './views/CreateArticles'
+import EditArticles from './views/EditArticles'
+import ShowArticles from './views/ShowArticles'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Route exact path="/">
+          <ArticlesCollection />
+        </Route>
+        <Route exact path="/show/:id" render={(props) => <ShowArticles id={props.match.params.id} />} />
+        <Route path="/create">
+          <CreateArticles />
+        </Route>
+        <Route exact path="/edit/:id" render={(props) => <EditArticles id={props.match.params.id} />} />
+      </div>
+    </Router>
   );
 }
 

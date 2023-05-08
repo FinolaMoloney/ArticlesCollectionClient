@@ -1,0 +1,29 @@
+.contactFormBorder {
+    border: 2px solid rgb(187, 187, 187);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.contact-form{
+    display:table;
+    margin:auto;
+}
+
+.btn {
+    border-radius: 8px;
+}
+
+.btn:hover {
+    background-color: #494848;
+    color: white;
+  }
+
+.header {
+    background-color: rgb(138, 189, 243);
+    text-align: center;
+    height: .5%;
+}
+
+.card-body {
+    overflow:hidden;
+}
